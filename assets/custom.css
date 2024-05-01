@@ -1,0 +1,13 @@
+.flatly-slider .rc-slider-handle {
+    background-color: #007bff;
+    border-color: #007bff;
+    box-shadow: none;
+}
+
+.flatly-slider .rc-slider-track {
+    background-color: #007bff;
+}
+
+.flatly-slider .rc-slider-rail {
+    background-color: #dee2e6;
+}
