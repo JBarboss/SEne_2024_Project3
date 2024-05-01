@@ -13,13 +13,13 @@ import numpy as np
 
 from prophet import Prophet
 
-df_plants = pd.read_csv("Project_3/global_power_plant_database.csv")
+df_plants = pd.read_csv("global_power_plant_database.csv")
 df_plants_portugal = df_plants[df_plants["country"]=="PRT"]
 df_plants_portugal["primary_fuel"] = df_plants_portugal["primary_fuel"].apply(lambda x: "Other" if x in ["Biomass", "Geothermal"] else x)
 df_plants_portugal = df_plants_portugal[df_plants_portugal["primary_fuel"].isin(["Hydro", "Solar", "Wind", "Other"])]
 
 
-df_power = df = pd.read_excel('Project_3/dgeg-ree-1995-2022.xlsx', skiprows=9)
+df_power = df = pd.read_excel('dgeg-ree-1995-2022.xlsx', skiprows=9)
 df_power = df_power.rename(columns={"Unnamed: 0": "Year",
 									"Hídrica > 10MW": "Hydro > 10MW",
 									"Hídrica ≤ 10MW": "Hydro ≤ 10MW",
@@ -40,7 +40,7 @@ df_power['Year'] = df_power['Year'][:-3]
 df_power = df_power.iloc[:-3, :]
 
 
-df_consumption = pd.read_excel('Project_3/pordata.xlsx', skiprows=7)
+df_consumption = pd.read_excel('pordata.xlsx', skiprows=7)
 df_consumption = df_consumption.iloc[1:29, :9]
 df_consumption = df_consumption.rename(columns={"Unnamed: 0": "Year",
 												"Total": "Consumption"})
