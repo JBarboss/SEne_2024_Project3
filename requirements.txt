@@ -116,3 +116,4 @@ Werkzeug==3.0.2
 xgboost==2.0.3
 xyzservices==2024.4.0
 zipp==3.18.1
+gunicorn
