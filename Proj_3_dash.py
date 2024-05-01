@@ -181,6 +181,7 @@ HOVER_STYLE = {
 }
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.FLATLY])
+server=app.server
 
 sidebar = html.Div([
     dbc.Row(
